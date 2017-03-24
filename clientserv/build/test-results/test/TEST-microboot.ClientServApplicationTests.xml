@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="microboot.ClientServApplicationTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-03-24T16:33:03" hostname="Stefans-MacBook-Pro.local" time="0.321">
+  <properties/>
+  <testcase name="toCalcFailureTest" classname="microboot.ClientServApplicationTests" time="0.313"/>
+  <testcase name="toCalcTest" classname="microboot.ClientServApplicationTests" time="0.008"/>
+  <system-out><![CDATA[2017-03-24 18:32:46 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [microboot.ClientServApplicationTests], using SpringBootContextLoader
+2017-03-24 18:32:46 - Could not detect default resource locations for test class [microboot.ClientServApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2017-03-24 18:32:46 - Could not detect default configuration classes for test class [microboot.ClientServApplicationTests]: ClientServApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2017-03-24 18:32:46 - Found @SpringBootConfiguration microboot.ClientServApplication for test class microboot.ClientServApplicationTests
+2017-03-24 18:32:46 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-03-24 18:32:46 - Could not instantiate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+2017-03-24 18:32:46 - Could not instantiate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+2017-03-24 18:32:46 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@40fe5880, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3b50aa07, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4ad59afc, org.springframework.test.context.support.DirtiesContextTestExecutionListener@46e89d34, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7460f731, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4a5e7b28, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2cba1ae5, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2eb9237b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5d9380e2, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@642d2743]
+2017-03-24 18:32:51.584  INFO 4224 --- [    Test worker] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@47148a00: startup date [Fri Mar 24 18:32:51 EET 2017]; root of context hierarchy
+2017-03-24 18:32:51.617  INFO 4224 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a0b80aa0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.2.RELEASE)
+
+2017-03-24 18:32:56 - No active profile set, falling back to default profiles: default
+2017-03-24 18:32:56 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@ab86dcf: startup date [Fri Mar 24 18:32:56 EET 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@47148a00
+2017-03-24 18:32:56 - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2017-03-24 18:32:56 - BeanFactory id=4877764d-2c18-3039-9c1e-25340b13977c
+2017-03-24 18:32:57 - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a0b80aa0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-03-24 18:32:57 - Tomcat initialized with port(s): 0 (http)
+2017-03-24 18:32:57 - Starting service Tomcat
+2017-03-24 18:32:57 - Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-03-24 18:32:57 - Initializing Spring embedded WebApplicationContext
+2017-03-24 18:32:57 - Root WebApplicationContext: initialization completed in 777 ms
+2017-03-24 18:32:57 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-03-24 18:32:57 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-03-24 18:32:57 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-03-24 18:32:57 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-03-24 18:32:57 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-03-24 18:32:58 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@ab86dcf: startup date [Fri Mar 24 18:32:56 EET 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@47148a00
+2017-03-24 18:32:58 - Mapped "{[/calculate]}" onto public java.util.concurrent.Callable<org.springframework.http.ResponseEntity<?>> microboot.ClientServApplication.calculate(java.lang.Double,java.lang.Double,microboot.ComputeTypeIndex)
+2017-03-24 18:32:58 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-03-24 18:32:58 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-03-24 18:32:58 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-24 18:32:58 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-24 18:32:58 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-24 18:33:03 - No spring.application.name found, defaulting to 'application'
+2017-03-24 18:33:03 - No URLs will be polled as dynamic configuration sources.
+2017-03-24 18:33:03 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-03-24 18:33:03 - No URLs will be polled as dynamic configuration sources.
+2017-03-24 18:33:03 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-03-24 18:33:03 - Tomcat started on port(s): 56597 (http)
+2017-03-24 18:33:03 - Started ClientServApplicationTests in 17.078 seconds (JVM running for 29.052)
+2017-03-24 18:33:03 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-03-24 18:33:03 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-03-24 18:33:03 - FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+2017-03-24 18:33:03 - Received a calculate call with params: 1.0 2.0 multiply
+2017-03-24 18:33:03 - Executing remote call with following information: http://localhost:8090/doCalculate?numInputOne=1.0&numInputTwo=2.0&computationType=multiply
+2017-03-24 18:33:03 - Reliable Call had to be executed with following parameters: numInputOne=1.0  numInputTwo=2.0  computationType=multiply
+2017-03-24 18:33:03 - Received a calculate call with params: 2.0 3.0 multiply
+2017-03-24 18:33:03 - Executing remote call with following information: http://localhost:8090/doCalculate?numInputOne=2.0&numInputTwo=3.0&computationType=multiply
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

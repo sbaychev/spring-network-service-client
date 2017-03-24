@@ -1,0 +1,5 @@
+rootProject.name = 'spring-network-service-client'
+
+include 'remoteserv'
+include 'clientserv'
+

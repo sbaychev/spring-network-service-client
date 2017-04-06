@@ -7,7 +7,6 @@ public enum ComputeTypeIndex {
 
     multiply(Multiply.class);
 
-
     final Class entityClass;
 
     ComputeTypeIndex(Class entityClass) {

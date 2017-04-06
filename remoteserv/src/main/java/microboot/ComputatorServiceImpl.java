@@ -19,9 +19,9 @@ public class ComputatorServiceImpl {
 
     }
 
-    public Double calculate(Double valToCalcOne, Double valToCalcTwo, String typeOfComputation) throws RemoteServException {
+    public Object calculate(Double valToCalcOne, Double valToCalcTwo, String typeOfComputation) throws RemoteServException {
 
-        Double computationResult = null;
+        Object computationResult = null;
 
         if (COMPUTATOR_MAP.containsKey(typeOfComputation)) {
             computationResult = COMPUTATOR_MAP.get(typeOfComputation).compute(valToCalcOne, valToCalcTwo);

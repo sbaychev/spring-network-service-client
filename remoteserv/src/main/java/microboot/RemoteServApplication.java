@@ -25,7 +25,7 @@ public class RemoteServApplication {
     ComputatorServiceImpl computatorService;
 
     @RequestMapping(value = "/doCalculate")
-    public Double doCalculate(Double numInputOne, Double numInputTwo, String computationType) throws Exception {
+    public Object doCalculate(Double numInputOne, Double numInputTwo, String computationType) throws Exception {
 
         LOG.info("Calculation started....");
 

@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.math.BigDecimal;
 import java.net.URI;
 
 /**
@@ -40,14 +41,14 @@ public class CalculationServicesImpl {
         return this.restTemplate.getForObject(uri, Object.class);
     }
 
-    public Double reliableCalc(Double numInputOne, Double numInputTwo, String computType) {
+    public Object reliableCalc(Double numInputOne, Double numInputTwo, String computType) {
 
         LOG.info("Reliable Call had to be executed with following parameters: " +
                 "numInputOne=" + numInputOne +" " +
                 " numInputTwo=" + numInputTwo + " " +
                 " computationType=" + computType);
 
-        return numInputOne*numInputTwo;
+        return BigDecimal.valueOf(numInputOne).multiply(BigDecimal.valueOf(numInputTwo));
     }
 
 }

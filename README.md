@@ -28,7 +28,7 @@ RemoteServer Application accepts 3 arguments REST call to exposed endpoint calle
 `$ ./gradlew build` (or for Windows `gradlew build`)
 
 # running the above first time, downloads the gradle 3.1..
-# downloads project dependencies
+# then downloads project dependencies
 # then it runs the gradle build task
 
 # run the bootRun task - it would deploy and start the client serv application on port 8080
@@ -40,8 +40,8 @@ RemoteServer Application accepts 3 arguments REST call to exposed endpoint calle
 # run the bootRun task - it would deploy and start the remote serv application on port 8090
 `$ ./gradlew bootRun` (or for Windows `gradlew bootRun`)
 
-#execute the following REST command call from within any web browser terminal client
+# execute the following REST command call from within any web browser terminal client
 `localhost:8080/calculate?numInputOne=1.0&numInputTwo=2.0&computType=multiply`
 
-#execute the following curl command from within any shell terminal client
+# execute the following curl command from within any shell terminal client
 `curl "localhost:8080/calculate?numInputOne=1.0&numInputTwo=2.0&computType=multiply"`

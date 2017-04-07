@@ -1,4 +1,5 @@
 **How to Use and Deploy the Network - Service - Client Application:**
+
 The Given Code Base Represents a RestFul Client-Server-Remote Server communication that is based in two modules:
 
 ClientServer - clientserv
@@ -26,29 +27,35 @@ RemoteServer Application accepts 3 arguments REST call to exposed endpoint calle
 `$ git clone https://github.com/sbaychev/spring-network-service-client.git`
 `$ cd spring-network-service-client`
 
-# execute the gradlew shell command as is below, the script would run and execute, no need to have Gradle Installed
+**execute the gradlew shell command as is below, the script would run and execute, no need to have Gradle Installed**
 `$ ./gradlew build` (or for Windows `gradlew build`)
 
-# running the above first time, downloads the gradle 3.1..
-# then downloads project dependencies
-# then it runs the gradle build task
+**running the above first time, downloads the gradle 3.1..**
+**then downloads project dependencies**
+**then it runs the gradle build task**
 
-# run the bootRun task - it would deploy and start the client serv application on port 8080
+**run the bootRun task - it would deploy and start the client serv application on port 8080**
+
 `$ ./gradlew bootRun` (or for Windows `gradlew bootRun`)
 
-# open new shell terminal window within the spring-network-service-client path
+**open new shell terminal window within the spring-network-service-client path**
+
 `$ cd remoteserv `
 
-# run the bootRun task - it would deploy and start the remote serv application on port 8090
+**run the bootRun task - it would deploy and start the remote serv application on port 8090**
+
 `$ ./gradlew bootRun` (or for Windows `gradlew bootRun`)
 
-# execute the following REST command call from within any web browser terminal client
+**execute the following REST command call from within any web browser terminal client**
+
 `localhost:8080/calculate?numInputOne=1.0&numInputTwo=2.0&computType=multiply`
 
-# execute the following curl command from within any shell terminal client
+**execute the following curl command from within any shell terminal client**
+
 `curl "localhost:8080/calculate?numInputOne=1.0&numInputTwo=2.0&computType=multiply"`
 
-# how to stop the application(s)
+**how to stop the application(s)**
+
 `go to any of the already open shell terminal client(s) and do the CTRL+C key combination`
 
 **Notes to consider:** both the _clientserv_ and _remoteserv_ application have their own gradlew shell scripts in case of anomaly or any of the above not working as described open a new terminal shell client and cd to the respective directory and execute either the `./gradlew bootRun` (Unix | Linux OS) or `gradlew bootRun` (Windows OS).

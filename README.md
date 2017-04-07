@@ -58,6 +58,8 @@ RemoteServer Application accepts 3 arguments REST call to exposed endpoint calle
 
 `go to any of the already open shell terminal client(s) and do the CTRL+C key combination`
 
+
+
 **NOTES TO CONSIDER:** 
 
 Both the _clientserv_ and _remoteserv_ application have their own gradlew shell scripts in case of anomaly or any of the above not working as described open a new terminal shell client and cd to the respective directory and execute either the `./gradlew bootRun` (Unix | Linux OS) or `gradlew bootRun` (Windows OS).

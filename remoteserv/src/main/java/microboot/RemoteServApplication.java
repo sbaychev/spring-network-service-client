@@ -6,9 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import java.util.concurrent.Callable;
 
 /**
  * Created by stefanbaychev on 3/24/17.
@@ -25,17 +29,19 @@ public class RemoteServApplication {
     ComputatorServiceImpl computatorService;
 
     @RequestMapping(value = "/doCalculate")
-    public Object doCalculate(Double numInputOne, Double numInputTwo, String computationType) throws Exception {
+    public Callable<ResponseEntity<?>> doCalculate(@Valid Double numInputOne, @Valid Double numInputTwo, String computationType) throws Exception {
 
         LOG.info("Calculation started....");
 
         try {
-            return computatorService.calculate(numInputOne, numInputTwo, computationType);
+
+            return ()-> ResponseEntity.ok(computatorService.calculate(numInputOne, numInputTwo, computationType).toString());
+
         } catch (Exception e) {
 
             LOG.warn("Error when performing calculation: " + e);
 
-            throw new Exception(e);
+            return ()-> ResponseEntity.badRequest().body("Bad Request: " + e);
         }
     }
 

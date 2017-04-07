@@ -28,25 +28,29 @@ public class CalculationServicesImpl {
     @HystrixCommand(fallbackMethod = "reliableCalc", commandProperties = {
             @HystrixProperty(name = "execution.isolation.strategy", value = "SEMAPHORE"),
             @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold", value = "1"),
-            @HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds", value = "10000") })
+            @HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds", value = "10000")})
     public Object calculate(Double numInputOne, Double numInputTwo, String computType) {
 
         String remoteCall = "http://localhost:8090/doCalculate" + "?numInputOne=" +
-                numInputOne +"&numInputTwo=" + numInputTwo + "&computationType=" + computType;
+                numInputOne + "&numInputTwo=" + numInputTwo + "&computationType=" + computType;
 
         LOG.info("Executing remote call with following information: " + remoteCall);
 
         URI uri = URI.create(remoteCall);
 
-        return this.restTemplate.getForObject(uri, Object.class);
+        Object resultCall = this.restTemplate.getForObject(uri, String.class);
+
+        LOG.info("Result From Remote Server Call Service: " + resultCall.toString());
+
+        return resultCall;
     }
 
-    public Object reliableCalc(Double numInputOne, Double numInputTwo, String computType) {
+    public BigDecimal reliableCalc(Double numInputOne, Double numInputTwo, String computType) {
 
         LOG.info("Reliable Call had to be executed with following parameters: " +
-                "numInputOne=" + numInputOne +" " +
-                " numInputTwo=" + numInputTwo + " " +
-                " computationType=" + computType);
+                "numInputOne = " + numInputOne + " " +
+                " numInputTwo = " + numInputTwo + " " +
+                " computationType = " + computType);
 
         return BigDecimal.valueOf(numInputOne).multiply(BigDecimal.valueOf(numInputTwo));
     }

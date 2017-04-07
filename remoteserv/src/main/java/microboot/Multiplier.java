@@ -13,7 +13,7 @@ public class Multiplier implements ComputatorService {
     public Multiplier(){}
 
     @Override
-    public BigDecimal compute(Double numValueOne, Double numValueTwo) {
+    public BigDecimal compute (Double numValueOne, Double numValueTwo) {
 
         return BigDecimal.valueOf(numValueOne).multiply(BigDecimal.valueOf(numValueTwo));
 

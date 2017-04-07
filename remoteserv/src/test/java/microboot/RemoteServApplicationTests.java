@@ -7,6 +7,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.math.BigDecimal;
+
 import static org.assertj.core.api.Java6Assertions.assertThat;
 
 /**
@@ -21,13 +23,17 @@ public class RemoteServApplicationTests {
 
     @Test
     public void calculateTest() {
-        Object resp = rest.getForObject("/doCalculate?numInputOne="+Double.valueOf(1)+"&numInputTwo="+Double.valueOf(2)+"&computationType=multiply", Object.class );
-        assertThat(resp).isEqualTo(Double.valueOf(2));
+
+        Object resp = rest.getForObject("/doCalculate?numInputOne="+Double.valueOf(1d)+"&numInputTwo="+Double.valueOf(2d)+"&computationType=multiply", String.class);
+
+        assertThat(BigDecimal.valueOf(Double.parseDouble(resp.toString())).compareTo(BigDecimal.valueOf(2d)));
     }
 
     @Test
     public void calculateWrongCommandTest() {
-        Object resp = rest.getForObject("/doCalculate?numInputOne="+Double.valueOf(1)+"&numInputTwo="+Double.valueOf(2)+"&computationType=add", Object.class );
+
+        Object resp = rest.getForObject("/doCalculate?numInputOne="+Double.valueOf(1d)+"&numInputTwo="+Double.valueOf(2d)+"&computationType=add", Object.class);
+
         assertThat(resp.toString()).contains(("Unsupported Operation: add"));
     }
 }

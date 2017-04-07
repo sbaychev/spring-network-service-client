@@ -12,7 +12,7 @@ RemoteServer Application accepts 3 arguments REST call to exposed endpoint calle
 
 *In case of remoteserv malfunction or not started at all a fallback mechanism using hystrix is used to deliver information back, however in a proper full blown network application it should reflect a list of other services to perform the request and tactics for handling the next steps
 
-**Technologies Used:**
+**TECHNOLOGIES USED:**
 
 1. Java 8
 2. Spring Framework | Spring Boot with following modules
@@ -58,6 +58,8 @@ RemoteServer Application accepts 3 arguments REST call to exposed endpoint calle
 
 `go to any of the already open shell terminal client(s) and do the CTRL+C key combination`
 
-**Notes to consider:** both the _clientserv_ and _remoteserv_ application have their own gradlew shell scripts in case of anomaly or any of the above not working as described open a new terminal shell client and cd to the respective directory and execute either the `./gradlew bootRun` (Unix | Linux OS) or `gradlew bootRun` (Windows OS).
+**NOTES TO CONSIDER:** 
+
+Both the _clientserv_ and _remoteserv_ application have their own gradlew shell scripts in case of anomaly or any of the above not working as described open a new terminal shell client and cd to the respective directory and execute either the `./gradlew bootRun` (Unix | Linux OS) or `gradlew bootRun` (Windows OS).
 Command | task `bootRun` is a Gradle task that executes the Spring Boot within its embedded application container
 You can alternatively type in `/.gradlew tasks` (Unix | Linux OS) or `gradlew tasks` (Windows OS) to see a list of available Gradle tasks that can be run over the application(s)

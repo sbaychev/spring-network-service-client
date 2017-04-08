@@ -1,16 +1,22 @@
 **How to Use and Deploy the Network - Service - Client Application:**
-
+----------------------------------------------
 The Given Code Base Represents a RestFul Client-Server-Remote Server communication that is based in two modules:
 
 ClientServer - clientserv
 RemoteServer - remoteserv
+
 ----------------------------------------------
-ClientServer Application takes 3 arguments REST call to exposed endpoint called `calculate`, running on port 8080
-RemoteServer Application accepts 3 arguments REST call to exposed endpoint called `doCalculate`, running on port 8090, does computational work and returns it to the first server that responds to the first made REST call with result
+
+ClientServer Application takes 3 arguments REST call to exposed endpoint called `calculate`, 
+             running on port 8080
 ----------------------------------------------
-*The 3 arguments are as follow, a valid Double numInputOne, a valid Double numInputTwo and a valid String computType "multiply" (multiply is for now the only valid command that executes)
+RemoteServer Application accepts 3 arguments REST call to exposed endpoint called `doCalculate`, 
+             running on port 8090, does computational work and returns it to the first server that responds to the first made REST call with result
 ----------------------------------------------
-*In case of remoteserv malfunction or not started at all a fallback mechanism using hystrix is used to deliver information back, however in a proper full blown network application it should reflect a list of other services to perform the request and tactics for handling the next steps
+
+* The 3 arguments are as follow, a valid Double numInputOne, a valid Double numInputTwo and a valid String computType "multiply" (multiply is for now the only valid command that executes)
+----------------------------------------------
+* In case of remoteserv malfunction or not started at all a fallback mechanism using hystrix is used to deliver information back, however in a proper full blown network application it should reflect a list of other services to perform the request and tactics for handling the next steps
 
 **TECHNOLOGIES USED:**
 ----------------------------------------------
